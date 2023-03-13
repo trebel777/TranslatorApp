@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_above="@id/option"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/sourceLanguage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter English"
+                android:minHeight="100dp"
+                android:gravity="top"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/targetLanguage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="18sp"
+                android:text=""/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/option"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_above="@id/translateBtn">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/sourceLanguageChooseBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="English"
+            android:layout_weight="1"
+            android:layout_marginEnd="5dp"
+            app:cornerRadius="18dp"/>
+
+        <ImageView
+            android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/targetLanguageBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Russian"
+                android:layout_marginEnd="5dp"
+                app:cornerRadius="18dp"/>
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/translateBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Translate"
+        app:cornerRadius="18dp"/>
+
+
+</RelativeLayout>
